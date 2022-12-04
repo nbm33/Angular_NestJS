@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Auth } from '../classes/auth';
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  auth: boolean = false;
 
-  constructor() { }
+  constructor( 
+    private http: HttpClient
+  ) { 
+
+  }
 
   ngOnInit(): void {
+    Auth.authEmitter.subscribe((authenticated) => {
+      this.auth = authenticated;
+    }
+    )
   }
+
+  logout(): void {
+    this.http.post('http://localhost:8000/api/logout',{})
+      .subscribe(() => {
+      });
+  }
+
 
 }
