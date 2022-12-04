@@ -27,6 +27,7 @@ export class NavComponent implements OnInit {
     this.http.post('http://localhost:8000/api/logout',{})
       .subscribe(() => {
       });
+    this.auth = false;
   }
 
 

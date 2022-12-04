@@ -10,6 +10,8 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FotComponent } from './fot/fot.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ForgotComponent } from './pages/forgot/forgot.component';
+import { ResetComponent } from './pages/reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     HomeComponent,
     RegisterComponent,
     NavComponent,
-    FotComponent
+    FotComponent,
+    ForgotComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

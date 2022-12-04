@@ -1,19 +1,16 @@
 <div  class="text-center">
     <main class="form-signin w-100 m-auto">
         <form [formGroup]='form' (ngSubmit)="submit()" novalidate>
-            <img class="mb-4" src="/assets/img/login.png" width="200" height="150">
-            <h1 class="h3 mb-3 fw-normal">Login</h1>
             
-            <div class="form-floating">
-                <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" require>
-                <label for="email">Email address:</label>
-            </div>
+            <h1 class="h3 mb-3 fw-normal">Please reset your password</h1>
+            
             <div class="form-floating">
                 <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" require>
                 <label for="password">Password:</label>
             </div>
-            <div>
-                <a class="col px-md-5" routerLink="/forgot">forgot password</a>
+            <div class="form-floating">
+                <input formControlName="password_confirm" type="password" class="form-control" id="floatingPassword" placeholder="PasswordConfirm" require>
+                <label for="password_confirm">Password Confirm:</label>
             </div>
         
             <button class="w-100 btn btn-lg btn-danger" type="submit">Submit</button>
